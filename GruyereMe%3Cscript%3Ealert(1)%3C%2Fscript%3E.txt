@@ -1,1 +1,5 @@
-/* Example created during Gruyere tutorial */
+/* Example created during Gruyere tutorial
+
+Triggers an alert when uploaded to Gruyere site and you go to the URL created.
+GitHub will change file name to %253Cscript%253Ealert(1)%253C%252Fscript%253E.txt inside URL and not show alert
+*/
