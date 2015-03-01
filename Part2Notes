@@ -20,3 +20,8 @@ Fix: Host the content on a separate domain so the script won't have access to an
      registering usernames that look innocent like wwww and using them for phishing attacks.)
 /*
 
+/* XSS by injecting a value in an HTML attribute (via form field or DevTools)
+
+Example:  <input type="text" value="red" onload="alert(1)" onmouseover="alert(2)" name="color">
+
+/*
