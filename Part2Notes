@@ -1,0 +1,21 @@
+/*
+Problem: REFLECTED XSS attack, the attack is in the request itself (frequently the URL) and the vulnerability occurs when
+the server inserts the attack in the response verbatim or incorrectly escaped or sanitized. The victim triggers the attack
+by browsing to a malicious URL created by the attacker. In a STORED XSS attack, the attacker stores the attack in the application
+(e.g., in a snippet) and the victim triggers the attack by browsing to a page on the server that renders the attack, by not
+properly escaping or sanitizing the stored data.
+
+Reflected XSS example on Gruyere: Go to http://google-gruyere.appspot.com/922914398469/flowers+%3Cscript%3Ealert(1)%3C/script%3E
+
+Fix: Validate, Escape, Sanitize any untrusted user data
+
+Stored XSS example on Gruyere: Upload a file called 
+                               GruyereMe%3cscript%3ealert(1)%3c%2Fscript%3e.txt   (contains script tags using URL % encoding)
+                               and browse to it: http://google-gruyere.appspot.com/922914398469/Me/GruyereMe%3Cscript%3Ealert(1)%3C%2Fscript%3E.txt
+                               
+Fix: Host the content on a separate domain so the script won't have access to any content from your domain.
+     Instead of hosting user content on example.com/username we would host it at username.usercontent.example.com or
+     username.example-usercontent.com. (Including something like "usercontent" in the domain name avoids attackers 
+     registering usernames that look innocent like wwww and using them for phishing attacks.)
+/*
+
