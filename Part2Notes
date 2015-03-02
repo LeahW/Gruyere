@@ -25,4 +25,16 @@ Fix: Host the content on a separate domain so the script won't have access to an
 Examples:  Enter this in an attribute field:        red' onload='alert(1)' onmouseover='alert(2)
            Insert this using DevTools, etc.         <input type="text" value="red" onload="alert(1)" onmouseover="alert(2)" name="color">
 
-/*
+Fix: Sanitize user data. Some HTML attributes to be disallowed (both upper & lowercase) include:
+     'onblur', 'onchange', 'onclick', 'ondblclick', 'onfocus', 'onkeydown', 'onkeypress', 'onkeyup', 'onload', 'onmousedown',
+     'onmousemove', 'onmouseout', 'onmouseover', 'onmouseup', 'onreset', 'onselect', 'onsubmit', 'onunload'
+     
+The right approach to HTML sanitization is to:
+   1. Parse the input into an intermediate DOM structure, then rebuild the body as well-formed output.
+   2. Use strict whitelists for allowed tags and attributes.
+   3. Apply strict sanitization of URL and CSS attributes if they are permitted.
+   
+ Other user-provided inputs that need to be sanitized: colors, fonts, sizes, urls. Use input validation (return an 'Invalid'
+  message) as well as output validation to protect against future vulnerabilities.
+  
+*/
