@@ -36,5 +36,30 @@ The right approach to HTML sanitization is to:
    
  Other user-provided inputs that need to be sanitized: colors, fonts, sizes, urls. Use input validation (return an 'Invalid'
   message) as well as output validation to protect against future vulnerabilities.
-  
 */
+
+/* Stored XSS via AJAX
+
+If the AJAX response includes unsanitized user data, it can allow scripts to be evaluated on the client-side and insert data
+into the document.
+
+ Fix: On the server-side, sanitize text and escape quotes for transfer to JavaScript
+      On client-side, use JSON parser to ensure string doe not include any dangerous content.
+/*
+
+/* Reflected XSS via AJAX
+
+A malicious url, for example: http://google-gruyere.appspot.com/123/feed.gtl?uid=<script>alert(1)</script> 
+If the gtl file is returned as text/html, the script will execute when victim clicks on it.
+
+ Fix: Use the Javascript escapes \x3c and \x3e. It is always safe to write '\x3c\x3e' in Javscript strings instead of '<>'.
+      Make sure JSON is never interpreted as HTML by serving JSON results as application/javascript and set both content type and
+      encoding in response. Example: Content-Type: text/html; charset=utf-8
+/*
+
+/*   Summary of Best Practices for XSS Prevention:
+       Wherever possible, do sanitizing via templates features instead of calling escaping functions in source code.
+       Familiarize yourself with the other security features of your template system.
+       Don't write your own template library.
+/*
+      
