@@ -1,0 +1,13 @@
+/* Client-State Manipulation
+
+ Problem: Elevation of Privilege
+    The Edit Profile settings look at cookies to see if a login is an administrator. You can create a false cookie by visiting:
+       http://google-gruyere.appspot.com/123/saveprofile?action=update&is_admin=True
+    and then log out and back in to create a new cookie based on this browser history.
+    Additonally, you can visit:
+       http://google-gruyere.appspot.com/123/saveprofile?action=update&is_admin=True&uid=username
+    to make ever user login an admin.
+    
+ Fix: Authorize access on the server-side at the time request is made. Don't leave it to the browser to toggle visibility.
+ */
+ 
