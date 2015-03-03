@@ -9,5 +9,13 @@
     to make ever user login an admin.
     
  Fix: Authorize access on the server-side at the time request is made. Don't leave it to the browser to toggle visibility.
+
+ Problem: Cookie Manipulation
+   On Gruyere, cookies look like hash|username|admin|author so you can gain access to the user account for Foo by logging in as 
+   Foo|admin|author . This will create a hash of hash|foo|admin|author||author with the result of logging you in as Foo but with
+   Administrator privileges.
+   
+ Fix: Restrict the characters that can be used in usernames. Use cookie-parsing that escapes usernames and rejects cookies that
+    don't meet the expected pattern. Use a secure, cryptographic hash function and also encrypt cookie, don't use plain text.
+    
  */
- 
