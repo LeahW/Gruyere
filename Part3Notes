@@ -18,4 +18,7 @@
  Fix: Restrict the characters that can be used in usernames. Use cookie-parsing that escapes usernames and rejects cookies that
     don't meet the expected pattern. Use a secure, cryptographic hash function and also encrypt cookie, don't use plain text.
     
+  Additional exploit: There is a 16 character limit on the username, but it is imposed on the client side so can be bypassed:
+    http://google-gruyere.appspot.com/123/saveprofile?action=new&uid=administrator|admin|author&pw=secret
+  Fix this by implementing the 16 character limit on server side as well.
  */
