@@ -9,6 +9,7 @@ Reflected XSS example on Gruyere: Go to http://google-gruyere.appspot.com/922914
 
 Fix: Validate, Escape, Sanitize any untrusted user data.
      In this case, error messages are displayed using error.gtl, but are not escaped in the template.
+     [[if:_message]]  <div class='message'>{{_message}}</div> [[/if:_message]] -----> should be {{_message:text}} inside <div>
 
 Stored XSS example on Gruyere: Upload a file called 
                                GruyereMe%3cscript%3ealert(1)%3c%2Fscript%3e.txt   (contains script tags using URL % encoding)
