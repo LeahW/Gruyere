@@ -24,4 +24,5 @@
   Additional exploit: There is a 16 character limit on the username, but it is imposed on the client side so can be bypassed:
     http://google-gruyere.appspot.com/123/saveprofile?action=new&uid=administrator|admin|author&pw=secret
   Fix this by implementing the 16 character limit on server side as well.
- */
+ 
+  Problem: XSRF or Cross Site Request Forgery */
