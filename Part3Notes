@@ -8,6 +8,9 @@
        http://google-gruyere.appspot.com/123/saveprofile?action=update&is_admin=True&uid=username
     to make ever user login an admin.
     
+    This is possible due to using [[if:_cookie.is_admin]] together with
+    <form method='get' action='/{{_unique_id}}/saveprofile'> in source code. 
+    
  Fix: Authorize access on the server-side at the time request is made. Don't leave it to the browser to toggle visibility.
 
  Problem: Cookie Manipulation
