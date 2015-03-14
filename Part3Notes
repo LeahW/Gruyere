@@ -25,4 +25,6 @@
     http://google-gruyere.appspot.com/123/saveprofile?action=new&uid=administrator|admin|author&pw=secret
   Fix this by implementing the 16 character limit on server side as well.
  
-  Problem: XSRF or Cross Site Request Forgery */
+  Problem: XSRF or Cross Site Request Forgery 
+            Webpages can reference resources in other domains. Scripts are run in the context of host page, not the linked page 
+            where script actually resides. This can lead to user data leaks.*/
