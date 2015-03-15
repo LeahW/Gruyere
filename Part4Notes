@@ -5,5 +5,8 @@
            In Gruyere, you can get to 'secret' text by traversing to:
            http://google-gruyere.appspot.com/922914398469%2F..%2Fsecret.txt
            
-  Fix: 
+  Fix: Only accept requests for specific resources that you pre-determine either manually or through a crawl. Second best is
+       to validate the final destination of URL, but hard to avoid encoding tricks.
+       
+  Problem: 
   */
