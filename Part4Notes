@@ -1,0 +1,9 @@
+/* Path Traversal
+
+  Problem: If the structure of website is known, you can manually type in URLs to get to hidden information. For example:
+           /../     (or %2F..%2F in optimized browsers) will escape to the parent directory.
+           In Gruyere, you can get to 'secret' text by traversing to:
+           http://google-gruyere.appspot.com/922914398469%2F..%2Fsecret.txt
+           
+  Fix: 
+  */
