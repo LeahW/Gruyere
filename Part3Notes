@@ -35,5 +35,8 @@
   Fix: For Delete, use Post instead of Get method (won't be re-sent without user input or leak any URL token).
        Use a time-stamped authentication token in request that is specific to the kind of action being requested.
        
+  Problem: XSSI Cross Site Script Inclusion
+           A website can reference other website's images, scripts, or other resources, and they will run in the context
+           of the page calling the resource.
   
   */
