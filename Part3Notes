@@ -37,6 +37,17 @@
        
   Problem: XSSI Cross Site Script Inclusion
            A website can reference other website's images, scripts, or other resources, and they will run in the context
-           of the page calling the resource.
+           of the page calling the resource. In Gruyere, you can exploit this by calling the script:
+           <script>
+              function _feed(s) {
+                   alert("Your private snippet is: " + s['private_snippet']);
+              }
+           </script>
+           
+           With a script src reference to the gruyere site where private snippet is located.
+           
+   Fix: Use an XSRF token to make sure only pages you control can get your JSON results. Use POST instead of GET to 
+        prevent use of <script> tags. Add a while statement to the end of script that prevents it from running, but strip
+        this out when running in your own domain. Use some invalid XML somewhere in script to prevent HTML from being ran.
   
   */
