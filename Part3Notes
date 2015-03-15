@@ -27,4 +27,13 @@
  
   Problem: XSRF or Cross Site Request Forgery 
             Webpages can reference resources in other domains. Scripts are run in the context of host page, not the linked page 
-            where script actually resides. This can lead to user data leaks.*/
+            where script actually resides. This can lead to user data leaks. On Gruyere, you can use XSRF by inserting
+            http://google-gruyere.appspot.com/922914398469/deletesnippet?index=0
+            into your user icon. When any user views this icon, on main page for example, code will run with that user's cookie
+            and delete their snippet. 
+            
+  Fix: For Delete, use Post instead of Get method (won't be re-sent without user input or leak any URL token).
+       Use a time-stamped authentication token in request that is specific to the kind of action being requested.
+       
+  
+  */
