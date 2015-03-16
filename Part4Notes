@@ -8,5 +8,11 @@
   Fix: Only accept requests for specific resources that you pre-determine either manually or through a crawl. Second best is
        to validate the final destination of URL, but hard to avoid encoding tricks.
        
-  Problem: 
-  */
+  Problem: Data-tampering through Path Traversal. Through manipulation of data input that is entered into URL, you can overwrite
+           the information that is already stored on a particular URL path. On Gruyere, you can overwrite above problem's target
+           by logging in as user named .. and uploading a secret.txt
+          
+  Fix: Escape dangerous characters (.. is dangerous on Windows) and make case-insensitive. Better yet, assign use unique user id.
+       instead in the URL.
+       
+*/
