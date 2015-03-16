@@ -17,5 +17,19 @@
    
    Fix: Ideally, only certain file types should be accepted for upload. Don't store user-uploaded files in same location as
         application files. Only allow files that are part of Gruyere to be treated as templates.
+        
+   Problem: Flaws in Template handling allow another attack method. On Gruyere, if a private snippet contains:
+               {{_db:pprint}}
+            it is handled first by ExpandTemplate, which then calls _ExpandBlocks followed by _ExpandVariables, but
+            _ExpandBlocks calls ExpandTemplate on nested blocks. So if a variable is expanded inside a nested block and 
+            contains something that looks like a variable template, it will get expanded a second time.
+            
+   Fix: Modify Template Expansion codes so that it never re-parses inserted variable values. Ideally, templates should only
+        access data specifically provided to them. You could do this by associating a database query with the template and
+        only data matching that query can be passed to template. This would allow you to apply user permissions to query.
+        
+   AJAX Vulnerabilities
+   
+   Problem:
  */
    
