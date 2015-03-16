@@ -1,0 +1,14 @@
+/*  Configuration Vulnerabilities
+ 
+   Problem: Leaving default settings in place can make it easier for an attacker to find an exploit, particularly if your
+            application or framework is 3rd party and easy to obtain. Default logins and passwords are often found online:
+                    http://www.governmentsecurity.org/articles/default-logins-and-passwords-for-networked-devices.html
+                    
+   Fix: Turn off default features you don't use to decrease attack surface. Change admin logins and passwords. 
+   
+   Problem: Debug features like Stack Trace and Status pages that should not be left in the production code. On Gruyere:
+                http://google-gruyere.appspot.com/123/dump.gtl
+            is included in the .gtl options but not referenced anywhere. It is a debug feature that allows database dump.
+            
+   Fix:
+   
