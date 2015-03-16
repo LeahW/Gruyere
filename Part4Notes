@@ -26,4 +26,8 @@
            
   Fix: Protect dangerous URLs -- don't allow upload of template. Validate User login names nad reject dangerous characters.
   
+  DOS Best Practices:
+      Put safeguards on any memory or computationally intensive task. Do sanity checks on input values. Monitor user
+      behavior and enforce usage quotas to prevent abusive patterns.
+  
 */
