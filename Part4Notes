@@ -21,5 +21,9 @@
             
   Fix: Add dangerous URLs to list of protected URLs. Make sure you change capitalization, etc. before security check.
   
+  Problem: Overload server by replacing template with one that contains infinite loop. Logged in as ../resources upload
+           menubar.gtl containing: [[include:menubar.gtl]]DoS[[/include:menubar.gtl]]
+           
+  Fix: Protect dangerous URLs -- don't allow upload of template. Validate User login names nad reject dangerous characters.
   
 */
