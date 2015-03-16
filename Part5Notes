@@ -13,5 +13,9 @@
    Fix: Delete dump.gtl. Remove debug features if possible, otherwise lockdown by admin login and whitelisted IP address. In 
         case data is exposed, use password hashing: only cryptographic hash and salt value is stored, not actual password.
         
+   Problem: Even if debug feature is removed, attacked can upload similar script of their own and run it.
+   
+   Fix: Ideally, only certain file types should be accepted for upload. Don't store user-uploaded files in same location as
+        application files. Only allow files that are part of Gruyere to be treated as templates.
  */
    
