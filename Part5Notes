@@ -10,5 +10,8 @@
                 http://google-gruyere.appspot.com/123/dump.gtl
             is included in the .gtl options but not referenced anywhere. It is a debug feature that allows database dump.
             
-   Fix:
+   Fix: Delete dump.gtl. Remove debug features if possible, otherwise lockdown by admin login and whitelisted IP address. In 
+        case data is exposed, use password hashing: only cryptographic hash and salt value is stored, not actual password.
+        
+ */
    
