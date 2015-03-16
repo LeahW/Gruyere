@@ -15,4 +15,11 @@
   Fix: Escape dangerous characters (.. is dangerous on Windows) and make case-insensitive. Better yet, assign use unique user id.
        instead in the URL.
        
+  Problem: Denial of Service. URLs used for resetting the server, quitting services, etc. can be accessed by anyone. Examples:
+            http://google-gruyere.appspot.com/922914398469/quitserver
+            http://google-gruyere.appspot.com/922914398469/reset
+            
+  Fix: Add dangerous URLs to list of protected URLs. Make sure you change capitalization, etc. before security check.
+  
+  
 */
