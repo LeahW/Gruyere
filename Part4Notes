@@ -1,4 +1,4 @@
-/*/* Path Traversal
+/* Path Traversal
 
   Problem: If the structure of website is known, you can manually type in URLs to get to hidden information. For example:
            /../     (or %2F..%2F in optimized browsers) will escape to the parent directory.
@@ -40,5 +40,5 @@
        being passed in directly to commands that evaluate arbitrary code, like eval() or system(). Bounds check for dangerous
        languages (C++) or improper use of safe languages (Python, Java) native libraries.
        
-       */
+       
 */
