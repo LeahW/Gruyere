@@ -1,4 +1,4 @@
-/* Path Traversal
+/*/* Path Traversal
 
   Problem: If the structure of website is known, you can manually type in URLs to get to hidden information. For example:
            /../     (or %2F..%2F in optimized browsers) will escape to the parent directory.
@@ -30,4 +30,15 @@
       Put safeguards on any memory or computationally intensive task. Do sanity checks on input values. Monitor user
       behavior and enforce usage quotas to prevent abusive patterns.
   
+  Problem: Remote Code Execution. A white box attack in which a tampered version of code is uploaded in place of legit file.
+           On Gruyere, execute this attack by adding malicious code to gtl.py or sanitize.py and forcing server to restart.
+           (possible with DOs attack as in previous). You could also attack gruyere.py directly, but attacks to infrastructure
+           are more problematic since they are less noticed.
+           
+  Fix: Always run your program with the least permission it needs (Gruyere should not be able to read and write to Gruyere 
+       directory). Application level checks that ensure user input only selects from developer-defined options, rather than
+       being passed in directly to commands that evaluate arbitrary code, like eval() or system(). Bounds check for dangerous
+       languages (C++) or improper use of safe languages (Python, Java) native libraries.
+       
+       */
 */
