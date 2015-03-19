@@ -30,6 +30,18 @@
         
    AJAX Vulnerabilities
    
-   Problem:
+   Problem: DOS via AJAX. A new JSON object is created that duplicates existing object and replaces it's value. On Gruyere, 
+            a new login id of private_snippet will create new values with their snippets that replaces other users' private
+            snippet section of profile page.
+            
+   Fix: More robust JSON structure that references the user when calling profile private snippets.
+   
+   Problem: Phishing via AJAX. By creating a login id that duplicates DOM element, you can replace value for that element.
+            On Gruyere, a login of menu-right can create a snippet that replaces the menu-right section of DOM, for example 
+            a new a href pointed to malicious location.
+        
+   Fix: Ensure that there cannot be a conflict of DOM identifiers by adding a prefix (user-- or unique identifier) to any
+        user-provided inputs. 
+          
  */
    
