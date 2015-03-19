@@ -42,6 +42,25 @@
         
    Fix: Ensure that there cannot be a conflict of DOM identifiers by adding a prefix (user-- or unique identifier) to any
         user-provided inputs. 
+        
+   Brief Explanations of other attacks not covered in the Gruyere CodeLab:
+   
+     Buffer Overflow: An application does not properly guard its buffers and allows user data to write past the end of a
+     buffer. This excess data can modify other variables, including pointers and function return addresses, leading to
+     arbitrary code execution. N/A/ to Gruyere because it uses Python, which doesn't allow read/write outside bounds of array.
+     
+     Integer Overflow: an integer computation silently returns an incorrect result, the application will operate incorrectly.
+     In the best case, the application fails. In the worst case, there is a security bug. For example, if an application
+     checks that length + 1 < limit then this will succeed if length is the largest positive integer value, which can then
+     expose a buffer overflow vulnerability. N/A to Gruyere because it uses Python, which doesn't allow integer overflow.
+     
+     Platform Vulnerablilites: Outside scope of the CodeLab, but in Gruyere's case potential sources of platform
+     vulnerabilities include Python runtime system and libraries, AppEngine, the operating system that Gruyere runs on
+     and the client side software (including the web browser) that users use to run Gruyere.
+     
+     SQL Injection: Allows attackers to inject arbitrary scripts into SQL queries. When a SQL query is executed it can either
+     read or write data, so an attacker can use SQL injection to read your entire database as well as overwrite it. Avoid by
+     using API calls instead of string concatenation to build SQL queries. N/A to Gruyere because it doesn't use SQL.
           
  */
    
