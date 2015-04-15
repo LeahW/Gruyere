@@ -1,0 +1,6 @@
+Overview of potential Hardware vulnerabilities
+Hardware Backdoors: Unspecified Don't Care conditions can create opportunities for unintentional or intentional (via foreign IP, 
+  untrusted design tools, overseas foundries, unethical hardware engineers, or external compromise) access to restricted states.
+  These can be avoided by specifying ever possible state, but creates overhead
+Physical Security:
+Side Channel Analysis:
