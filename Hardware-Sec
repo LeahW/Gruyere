@@ -4,3 +4,8 @@ Hardware Backdoors: Unspecified Don't Care conditions can create opportunities f
   These can be avoided by specifying ever possible state, but creates overhead
 Physical Security:
 Side Channel Analysis:
+
+Watermarking: Provide proof of authorship by embedding additional signature information. This can be done for Hardware IP by
+  creating additional constraints out of Don't Care conditions that encode 0 or 1 bits. Challenge is to ensure equal performance
+   (don't increase number of literals) while satisfying both the constraints required by system and by watermark signature.
+  
