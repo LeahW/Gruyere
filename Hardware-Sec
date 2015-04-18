@@ -8,4 +8,7 @@ Side Channel Analysis:
 Watermarking: Provide proof of authorship by embedding additional signature information. This can be done for Hardware IP by
   creating additional constraints out of Don't Care conditions that encode 0 or 1 bits. Challenge is to ensure equal performance
    (don't increase number of literals) while satisfying both the constraints required by system and by watermark signature.
+   Public watermarks use a public signature, which helps transparency, but makes it too easy to change a few bits in the public
+   watermark header. To properly validate, hash the bitstream file for the public signature and use this as the key to encrypt
+   the hash and match to the public watermark body.
   
