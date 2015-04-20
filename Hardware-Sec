@@ -13,8 +13,13 @@ Watermarking: Provide proof of authorship by embedding additional signature info
    the hash and match to the public watermark body.
    
 Integrated Circuit Metering: Security protocols that protect design house against (overseas) foundries overbuilding orders.
-   Passive, non-functional example is imprinted and/or stickered PIN or serial number. A functional scheme might use intrinsic
-   variations that arise during the manufacturing process as an identifier. Additional flip-flops are introduced and used to 
+   Passive, non-functional example is imprinted and/or stickered PIN or serial number. 
+   
+Internal Unclonable Metering example: A functional scheme might use intrinsic variations that arise during the manufacturing process as an identifier. Additional flip-flops are introduced and used to 
    boost the Finite State Machine. This random value can be directed by a design house-controlled input sequence to reach the
    necessary initial state for functionality.
+   
+External Unclonable Active Metering example: A functional scheme might use additional control signals/logic (e.g. unneeded XOR)
+   in non-critical parts of design. Each fabricate circuit is locked until it receives key from design house to unlock correct
+   value for all control signals. 
   
