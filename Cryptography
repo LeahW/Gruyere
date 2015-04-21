@@ -2,3 +2,5 @@ Prefer Public Encryption algorithm over proprietary. Non-peer reviewed ciphers a
 
 Symmetric Single Use Key: key is only used to encrypt one message (e.g. email)
 Symmetric Multi Use Key: key is used to encrypt many messages (e.g. file system). Requires more work to be secure.
+Digital Signature: Signature is a function of the content being signed, so attacker can't copy from one doc to the next
+Secure Multi-Party Computation: Get the total result without revealing individual IDs. Examples: elections, private auctions
