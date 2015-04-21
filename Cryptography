@@ -1,0 +1,4 @@
+Prefer Public Encryption algorithm over proprietary. Non-peer reviewed ciphers are often reverse-engineered, broken by analysis
+
+Symmetric Single Use Key: key is only used to encrypt one message (e.g. email)
+Symmetric Multi Use Key: key is used to encrypt many messages (e.g. file system). Requires more work to be secure.
