@@ -4,3 +4,11 @@ Symmetric Single Use Key: key is only used to encrypt one message (e.g. email)
 Symmetric Multi Use Key: key is used to encrypt many messages (e.g. file system). Requires more work to be secure.
 Digital Signature: Signature is a function of the content being signed, so attacker can't copy from one doc to the next
 Secure Multi-Party Computation: Get the total result without revealing individual IDs. Examples: elections, private auctions
+Private Outsource of Computation: Outsource a query/function of encrypted data and receive still-encrypted data back in return
+Zero Knowledge: Ability to prove that you know the solution to a puzzle without actually disclosing details about that solution
+
+Three Rigorous Steps in Cryptography (for each primitive):   
+1. Precisely specify Threat Model (e.g. what can attacker do to attack digital signature? what would his goals be?)
+2. Propose a Construction 
+3. Prove that breaking Construction under Threat Model will solve an underlying hard problem (e.g. factoring integers)
+
