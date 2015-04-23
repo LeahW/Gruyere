@@ -26,7 +26,8 @@ Vigener Cipher: Use a Key to add to CT and compute modular of each character to 
 DES: Data Encryption Standard developed by IBM in 1974 uses 2^56 key space to encrypt 64 bits block size
 Uniform distribution: All x have equal probability, 1/n,  of occurence
 Point distribution: x[0] has 1 probability all else in set, x[1:] have 0 probability
-Discrete probability
+Discrete probability:
+ Union Bound: If the probability of the union of  A and B occurring is less than the prob of A plus the prob of B (overlap)
 
 
 
