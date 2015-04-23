@@ -28,6 +28,10 @@ Uniform distribution: All x have equal probability, 1/n,  of occurence
 Point distribution: x[0] has 1 probability all else in set, x[1:] have 0 probability
 Discrete probability:
  Union Bound: If the probability of the union of  A and B occurring is less than the prob of A plus the prob of B (overlap)
+ Uniform Random Variable: Occurrence is uniform; probability of x is based on proportion of solution space composed of x
+ Deterministic algorithm: the same input will always generate the same output 
+ Randomized algorithm: includes implicit argument r generated randomly each time based on input, and also any other arguments
+ 
 
 
 
