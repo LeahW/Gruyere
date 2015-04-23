@@ -32,10 +32,16 @@ Discrete probability:
  Deterministic algorithm: the same input will always generate the same output 
  Randomized algorithm: includes implicit argument r generated randomly each time based on input, and also any other arguments
  Independence: variable x does not depend on value of y
- XOR: exclusive or; calculates modular. If you use a random to XOR, calculated string always becomes a uniform random variable
+ XOR: exclusive or; calculates modular 2. If you use random to XOR, calculated string always becomes a uniform random variable
  Birthday Paradox: If 24 people are in a room, likely 2 will hare the same birth day. Calculation based on total universe
           (for birthdays, 365) to 1/2 power (e.g. square root) multiplied by 1.2. This formula predicts when likelihood of
           same configuration existing in a set (a collision) is more probable (>50%) than not.
+
+Ciphers must satisfy consistency/correctness property so that all possible messages can be decrypted with the key. And all
+possible keys must encrypt message. Must also be efficient, that is, runs in polynomial time.
+
+One-time Pad: Uses a key space made up of random bit string of the same size as message bit string; key is not repeated.
+      Encrypted message = Key XOR Message   To decrypt, Cipher Text XOR Key = Message
  
 
 
