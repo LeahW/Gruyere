@@ -17,6 +17,11 @@ Key space: The set of all possible keys that can be used to generate a key, e.g.
 Cipher Text or CT attacks utilize only the cipher text to solve. Example of CT techniques to break Substitution Ciphers:
   1. Single character frequency: compare CT with stats for standard english usage, i.e. 12.7% E, 9.1% T, and 8.1% A 
   2. Digram frequency : compare digram (letter pairs) frequency of commonly used pairs, i.e. 'he', 'an', 'in', and 'th'
+  
+Vigener Cipher: Use a Key to add to CT and compute modular of each character to obtain ET. Example:
+                       Key= LEAHWLEAHWLE
+                       CT=  MYSECRETTEXT
+                       ET=  YDTMZDJUBBJY
 
 
 
