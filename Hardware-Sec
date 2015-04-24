@@ -51,7 +51,7 @@ Attack Types:
   
   Reverse Engineering: Invasive. Study chip structure and determin functionality by taking apart. Requires high cost,
     skill set similar to hardware designer, and capability similar to hardware manufacturer. 
-  Micro-probing: Invasive. Requires direct acces to chip surface to observe, manipulate, and interfere.
+  Micro-probing: Invasive. Requires direct access to chip surface to observe, manipulate, and interfere.
   Fault Genration: Semi- or Non-invasive. Run hardware in abnormal environments or use faulty input in hopes of causing 
     hardware to leak information or allow additional access.
   Side-channel Attack: Non-invasive. First, monitor/measure chip characteristics (power, current, timing, EM radiation, etc.)
