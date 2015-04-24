@@ -58,6 +58,23 @@ Attack Types:
     during normal operation. Second, perform data analysis to learn information.
   Software Attack: Non-invasive. Attacker uses normal input/output interface to exploit vulnerabilities in protocols, 
     algorithms, and software implementations. Repeatable. 
+  Decapsulation/Deprocessing: Removing chip package, including multiple layers to expose silicon die and allow attackers to
+    reverse engineer using optical microscope, digital camera to capture details of chip design and function at each layer.
+  Depassivation/Microprobing: Expensive, high-tech equipment required. Can monitor on-chip bus activities down to the 
+    submicron level without disturbing chip activities. Can also inject test signals and observe chip response. Secret keys
+    and sensitive data can be extracted from memory using this method.
+  Chip modification: Using design knowledge and silicon fabrication capabilities, attackers can rebuild or modify chip for 
+    invasive attack, e.g. cutting internal connections to disable on-chip components such as encryption blocks. Cost varies.
+  
+Attack Tools:
+  Invasive: Integrated Circuit soldering/desoldering station, simple chemical lab, high-res optical microscope, oscilloscope,
+    logic analyser, signal generator, wire-bonding machine, laser-cutting system, microprobing station, scanning electron 
+    microscope, FIB (focused ion beam) station.  Allows depacking of silicon chip and to make contacts with signals.
+  Semi-invasive: all of above thru signal generator, plus UV light sources, lasers, microscopes for laser scanning and
+    infrared, PC with data acqusition board, FPGA boards, prototyping boards.
+  
+    
+  
   
     
   
