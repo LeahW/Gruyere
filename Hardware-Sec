@@ -22,4 +22,29 @@ Internal Unclonable Metering example: A functional scheme might use intrinsic va
 External Unclonable Active Metering example: A functional scheme might use additional control signals/logic (e.g. unneeded XOR)
    in non-critical parts of design. Each fabricate circuit is locked until it receives key from design house to unlock correct
    value for all control signals. 
+   
+Hardware Physical Attack: requires access to chip or connection to signal wires / ability to measure target's signals, e.g.
+    acoustic, RFID, and near-field communication, in addition to hardware, cryptographic algorithms, and data analysis
+    Attacks are two-phased: Interaction (exploit a physical characteristic) and Exploitation (analyze the collected info)
+    
+Attackers:
+  Class 1: Clever Outsiders. Smart, but limited access to system and limited access to equipment and tools
+  Class 2: Knowledgeable Insiders. Has knowledge of system and access to equipment/tools.
+  Class 3: Funded Organizations. Access to all resources, team of experts. Can invent new attacks to break target system.
+  
+Attack Goals:
+  Theft of services provided by target, or money/payment info from target.
+  Illegally Sell or Re-sell the product (IP piracy, overbuilding, cloning, counterfeiting)
+  Interrupt or Denial-of-Service (give competitors an unfair edge)
+  
+  Attackers 'break' the system by gaining info they should not have (secret data or keys, system/chip/IP design info)
+   this differs from cryptanalysis in method: not a mathematical analysis of theoretical weakness, but a physical attack
+   that targets implementation of cryptographic encryptions. 
+   
+Attack Types: 
+  Invasive Attacks: 
+  
+
+  
+
   
