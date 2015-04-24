@@ -42,7 +42,24 @@ Attack Goals:
    that targets implementation of cryptographic encryptions. 
    
 Attack Types: 
-  Invasive Attacks: 
+  Invasive Attacks: Direct access needed to chip/device. Hardware often damaged, so attack cannot be repeated and evidence of 
+    tampering is often left behind. Typically high cost attack with advanced skill required.
+  Non-invasive Attacks: Interact with device/chip via interface (voltage, current, clock, i/o, etc.) passive monitoring or
+    active injection. Typically non-damaging, no evidence of tampering, and is low-cost and repeatable.
+  Semi-invasive Attacks: Access to surface of the chip, but no contacts with internal wires. Normally does not damage
+    equipment and may or may not leave tamper evidence. Moderate cost and skill required. Usually repeatable.
+  
+  Reverse Engineering: Invasive. Study chip structure and determin functionality by taking apart. Requires high cost,
+    skill set similar to hardware designer, and capability similar to hardware manufacturer. 
+  Micro-probing: Invasive. Requires direct acces to chip surface to observe, manipulate, and interfere.
+  Fault Genration: Semi- or Non-invasive. Run hardware in abnormal environments or use faulty input in hopes of causing 
+    hardware to leak information or allow additional access.
+  Side-channel Attack: Non-invasive. First, monitor/measure chip characteristics (power, current, timing, EM radiation, etc.)
+    during normal operation. Second, perform data analysis to learn information.
+  Software Attack: Non-invasive. Attacker uses normal input/output interface to exploit vulnerabilities in protocols, 
+    algorithms, and software implementations. Repeatable. 
+  
+    
   
 
   
