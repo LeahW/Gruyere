@@ -42,6 +42,14 @@ possible keys must encrypt message. Must also be efficient, that is, runs in pol
 
 One-time Pad: Uses a key space made up of random bit string of the same size as message bit string; key is not repeated.
       Encrypted message = Key XOR Message   To decrypt, Cipher Text XOR Key = Message
+    All possible messages are equally likely to produce any given Cipher Text. No info about key text can be discerned.
+    There is no possible cipher text-only attack, in other words, it has perfect secrecy (but other attacks are possible . . .)
+    However, perfect secrecy requires key length >= message length
+
+    
+
+    
+
  
 
 
