@@ -85,6 +85,16 @@ Examples:
   Local Heating: Can permanently change memory cells
   Laser Pointers: Write into Static RAM or Memory Masking: disable Write operation in embedded fresh memory
   Side Channel Analysis: Laser can be pointed to certain transistor to collect power trace before and after using laser.
+  Brute Force Attack: Search for info such as key/password info on chip, which may be restricted to certain areas of chip or
+    memory location can be predicted. Can also try to rebuild truth table of i/o to reveal design details. Applying high
+    voltage (twice the normal) or injecting random signals/commands can allow attacker access to factory back doors and test
+    mode.
+  Data Remanence:
+    SRAM: SRAM retains data for short amount of time after power-down. It also may burn-in data that has been stored 
+      long-term and this can be seen after power-up. Finally, data in SRAM can be frozen at low temperatures (less than 20 
+      degrees Celsius is typical) and read by attacker.
+    
+      
   
   
   
