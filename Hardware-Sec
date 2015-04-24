@@ -72,6 +72,21 @@ Attack Tools:
     microscope, FIB (focused ion beam) station.  Allows depacking of silicon chip and to make contacts with signals.
   Semi-invasive: all of above thru signal generator, plus UV light sources, lasers, microscopes for laser scanning and
     infrared, PC with data acqusition board, FPGA boards, prototyping boards.
+  Non-invasive: Integrated Circuit soldering/desoldering station,oscilloscope, logic analyser, signal generator, PC with
+    data acqusition board, FPGA boards, prototyping boards, digitial multimeter, Universal Programmer, IC tester,  and
+    programmer power supplies
+    
+Examples:
+  Imaging attack: With the help of cameras and photon probing, can read layout of chip, localize active regions and read 
+    logical states of transistors. 
+  Fault Injections: After locating security fues, attacker uses UV light to reset fuses to unprotected state. 
+  Optical Fault Injection: Illumination of transistor can make it conduct and introduce transient fault or set value of a
+    single bit in memory. Can be done with cheap laser pointers.
+  Local Heating: Can permanently change memory cells
+  Laser Pointers: Write into Static RAM or Memory Masking: disable Write operation in embedded fresh memory
+  Side Channel Analysis: Laser can be pointed to certain transistor to collect power trace before and after using laser.
+  
+  
   
     
   
