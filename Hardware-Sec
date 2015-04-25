@@ -79,7 +79,7 @@ Attack Tools:
 Examples:
   Imaging attack: With the help of cameras and photon probing, can read layout of chip, localize active regions and read 
     logical states of transistors. 
-  Fault Injections: After locating security fues, attacker uses UV light to reset fuses to unprotected state. 
+  Fault Injections: After locating security fuses, attacker uses UV light to reset fuses to unprotected state. 
   Optical Fault Injection: Illumination of transistor can make it conduct and introduce transient fault or set value of a
     single bit in memory. Can be done with cheap laser pointers.
   Local Heating: Can permanently change memory cells
@@ -90,9 +90,29 @@ Examples:
     voltage (twice the normal) or injecting random signals/commands can allow attacker access to factory back doors and test
     mode.
   Data Remanence:
-    SRAM: SRAM retains data for short amount of time after power-down. It also may burn-in data that has been stored 
+    In SRAM: SRAM retains data for short amount of time after power-down. It also may burn-in data that has been stored 
       long-term and this can be seen after power-up. Finally, data in SRAM can be frozen at low temperatures (less than 20 
       degrees Celsius is typical) and read by attacker.
+    In EEPROM and Flash memory devices: Threshold voltage changes after each write/erase cycle in such a way that you can 
+      extract data after multiple write/erase cycles.
+  Fault Injection: Provide faulty, unexpected input or commands and observe how system executes it. Standard I/O usually has
+      safeguards against this, so alternate methods can be used: glitches (e.g. clock, voltage), temperature, white light,
+      laser, x-ray and ion beams, electromagnetic flux. Many of these methods can change state of flip-flops/transistors. 
+  Glitches: A fast change in the chip's supply signals (e.g. clock, power on/off) whcih can trigger change of state in transistors
+      or flip-flops. May not have control of which specific flip-flop or transistor changes, so must do systematic search.
+
+Countermeasures: Use fault-tolerant development techniques. Comes with increased overhead and loss of performance. 
+  Software level: execution redundancy, checksums on data transfers, randomized execution, 
+  Hardware level: redundancy (i.e. fault tolerance), fault detector
+  
+  Bus Scrambling: Data and Memory bus lines are usually ordered sequentially from lowest to highest bridge (oor vice versa)
+    but you can change the order and connections to make attacker probes more difficult.
+  Data Encryption: Encrypt and Ddecrypt data in a trusted zone before use.
+  Glue Logic Design: Standard building blocks, e.g. register files, instruction decoders, input/output circuits, arthmetic
+    and logical units, are glued together to conceal where the attacker can find targeted signal to attack.
+  Sensor Mesh as top inner layer: Monitors all paths continuously, and will short-circuit and trigger an alarm if micro
+    probing detected. It then resets memory to preserve data.
+  
     
       
   
