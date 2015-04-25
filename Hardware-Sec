@@ -112,6 +112,21 @@ Countermeasures: Use fault-tolerant development techniques. Comes with increased
     and logical units, are glued together to conceal where the attacker can find targeted signal to attack.
   Sensor Mesh as top inner layer: Monitors all paths continuously, and will short-circuit and trigger an alarm if micro
     probing detected. It then resets memory to preserve data.
+    
+Tamper Resistance Levels: From lowest to highest in terms of time, cost, and knowledge required to successfully attack:
+    Zero: No security features and open access, e.g. microcontrollers, FPGA chips with external memory. No special tools or
+          equipment needed to attack. Attack within minutes to hours.
+    Low: Some easy to break security features, e.g. microcontroller with unprotected internal memory and propritary access
+         Low cost tools needed, $500 or less. Attacks take hours to days.
+    MODL: Has security features against low-cost attacks, e.g. microcontroller with memory and access protection, but 
+         vulnerable to power analysis or power glitches. Tools needed are $5000 or less and attacks take days to weeks.
+    MOD: Has more features to prevent attacks, e.g. microcontroller with protection against UV light attack, ASICs, secure
+         memory chips, smartcards. Need special tools, knowledge, equipment up to $100k. Attacks take weeks to months.
+    MODH: Application specific security features, e.g. secure FPGA, modern smartcard, complex ASICs    
+    HIGH: Systems designed for security applications, e.g. military, banking, etc. Should be secure against all known
+         attacks. 
+    
+    
   
     
       
