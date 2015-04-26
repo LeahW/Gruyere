@@ -33,7 +33,7 @@ Attackers:
   Class 3: Funded Organizations. Access to all resources, team of experts. Can invent new attacks to break target system.
   
 Attack Goals:
-  Theft of services provided by target, or money/payment info from target.
+  Theft of services provided by target, access to resources, or money/payment info from target.
   Illegally Sell or Re-sell the product (IP piracy, overbuilding, cloning, counterfeiting)
   Interrupt or Denial-of-Service (give competitors an unfair edge)
   
@@ -52,7 +52,7 @@ Attack Types:
   Reverse Engineering: Invasive. Study chip structure and determin functionality by taking apart. Requires high cost,
     skill set similar to hardware designer, and capability similar to hardware manufacturer. 
   Micro-probing: Invasive. Requires direct access to chip surface to observe, manipulate, and interfere.
-  Fault Genration: Semi- or Non-invasive. Run hardware in abnormal environments or use faulty input in hopes of causing 
+  Fault Generation: Semi- or Non-invasive. Run hardware in abnormal environments or use faulty input in hopes of causing 
     hardware to leak information or allow additional access.
   Side-channel Attack: Non-invasive. First, monitor/measure chip characteristics (power, current, timing, EM radiation, etc.)
     during normal operation. Second, perform data analysis to learn information.
@@ -126,6 +126,17 @@ Tamper Resistance Levels: From lowest to highest in terms of time, cost, and kno
     HIGH: Systems designed for security applications, e.g. military, banking, etc. Should be secure against all known
          attacks. 
     
+FIPS or Federal Information Processing Standards for securing Cryptographic modules: 
+  Level 1: Specifies basic security requirements for cryptographic module
+  Level 2: Add physical security, e.g. tamper-evident coating and seals, pick-resistant locks
+  Level 3: Advanced physical security for cryptographic parameters within cryptographic modules
+  Level 4: Detect penetrations to the cryptographic module/device from all directions
+  
+If the cost to break into system is higher than benefit received, rational attackers won't even try.
+Locate overall weak points, but recognize which assets on system are most important to be secured.
+Chip manufacturers sell on strong points, but you may need to redesign if you want to fix weaknesses. Many products with
+  defects available in the market. Must take system engineering approach and truly design for security, not add in later
+  
     
   
     
