@@ -151,6 +151,10 @@ Diffie-Hellman Key Exchange:
   To obtain the key, take Bob's result value and raise it to the value of Alice's secret value and calculate to given modular
   and it will matach Alice's result-raised to-Bob's secret exponent modular exponentiation result.
   
+RSA Public Key Encryption:
+  Assymetric encrytion using both a public key for others to use in encryting message, and a private key to decrypt messages.
+  
+  
   
     
   
