@@ -143,7 +143,11 @@ Modular Exponentiation:
   Iterative exponentiation and modular:
      Since 'x≡y (mod n)' is the same as 'ax≡ay (mod n)' you only really need to calculate each exponent when result is less
     than n, otherwise calculate modular of that number and n to keep the exponent number from getting too big.
-  
+    
+Diffie-Hellman Key Exchange:
+  Alice can generate a random number, and keep it a secret, but use it as an exponent value for a set base and calculate the 
+  modular. She gives this result to Bob, who checks it against his random number-exponent-modular function and receives an
+  identical modulo value. Alice and Bob's random numbers are hidden from each other but they can verify modulo is the same.
     
   
     
