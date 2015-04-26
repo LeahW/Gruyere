@@ -137,6 +137,13 @@ Locate overall weak points, but recognize which assets on system are most import
 Chip manufacturers sell on strong points, but you may need to redesign if you want to fix weaknesses. Many products with
   defects available in the market. Must take system engineering approach and truly design for security, not add in later
   
+Modular Exponentiation:
+  Modular calculates the remainder when a base integer raised to a given exponent value is divided by a positive integer.
+               5^2≡1 (mod 3)  or '5 to the 2nd power is congruent to 1 modulo 3'
+  Iterative exponentiation and modular:
+     Since 'x≡y (mod n)' is the same as 'ax≡ay (mod n)' you only really need to calculate each exponent when result is less
+    than n, otherwise calculate modular of that number and n to keep the exponent number from getting too big.
+  
     
   
     
