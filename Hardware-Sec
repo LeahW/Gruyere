@@ -145,9 +145,13 @@ Modular Exponentiation:
     than n, otherwise calculate modular of that number and n to keep the exponent number from getting too big.
     
 Diffie-Hellman Key Exchange:
-  Alice can generate a random number, and keep it a secret, but use it as an exponent value for a set base and calculate the 
-  modular. She gives this result to Bob, who checks it against his random number-exponent-modular function and receives an
-  identical modulo value. Alice and Bob's random numbers are hidden from each other but they can verify modulo is the same.
+  Alice can generate a random number, and keep it a secret, but use it as an exponent value for a set base and calculate using 
+  given modular. She gives this result to Bob, who generates a random number, uses same exponent-modular function and gives 
+  resulting value to Alice. Alice and Bob's random numbers are hidden from each other but the modular used by each is the same.
+  To obtain the key, take Bob's result value and raise it to the value of Alice's secret value and calculate to given modular
+  and it will matach Alice's result-raised to-Bob's secret exponent modular exponentiation result.
+  
+  
     
   
     
