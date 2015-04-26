@@ -156,7 +156,7 @@ RSA Public Key Encryption:
     Public key is created by (e, n) where n is a large number and e is a number relatively prime to the function:
         (p-1)*(q-1)    where p and q are numbers that can be multiplied together to obtain n
     Private key is created by (d, n) where n is the same large number and d is a number that fulfills the requirement:
-        e*d = 1 mod (p-1)*(q-1)
+        e*d = 1(mod(p-1)*(q-1))
     Encryption function: C = P^e(mod n)
     Decryption function: P = C^d(mod n)
   
