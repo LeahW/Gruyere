@@ -160,6 +160,9 @@ RSA Public Key Encryption:
     Encryption function: C = P^e(mod n)   where P i the encrypted value, and C is the cipher text
     Decryption function: P = C^d(mod n)   where P i the encrypted value, and C is the cipher text
   
+Hardware Efficiency for Exponents: More power is used up by each multiplication operation, so it is less efficient to write
+   'x^19' which requires e-1 or 18 multiplications, than to refactor to '(x^16)(x^2)(x^1)' which is 3 operations. Use 
+   powers of two when refactoring to make it easy to convert to binary, i.e. '10011' for above example
   
   
     
