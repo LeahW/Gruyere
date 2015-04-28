@@ -190,6 +190,14 @@ Hardware Efficiency for Exponents: More power is used up by each multiplication 
     when the if statement runs (i.e. when it is 1 not 0). For example a^23 can be written using only 7 operations, not 22.
   Square and Multiply is vulnerable to side-channel attacks; possible to observe when if statements are ran based on
     increase in current, power or time delay, and thereby determine if a 1 or 0 is being processed.
+    
+  Montgomery Reduction: 
+                             m = T(-N^-1)(mod R)
+                             t = (T + mN)/R
+                                if (N<=t)
+                                  t=t-N
+                                  
+                            TR^-1 = (T + T(-N^-1) (mod R)N)/R (mod N)
                                             
                                        
                                        
