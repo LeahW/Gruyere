@@ -184,7 +184,10 @@ Hardware Efficiency for Exponents: More power is used up by each multiplication 
                                                   b=b*c (mod n)
                                             }
                                             return b
-                                            
+                                
+  Square and Multiply is more efficent than writing an exponent, which needs exponent-1 multiplication operations. The 
+    only multiplications done in Square and Multiply are when loop runs (once pet bit of exponent written in binary) and
+    when the if statement runs (i.e. when it is 1 not 0). For example a^23 can be written using only 7 operations, not 22.
                                             
                                        
                                        
