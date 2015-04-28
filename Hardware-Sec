@@ -177,7 +177,7 @@ Hardware Efficiency for Exponents: More power is used up by each multiplication 
                                              
         Right-to-Left Implementation: To compute a^e (mod n)
                                         1.  Convert e to binary
-                                        2.  b= a to the power of the least significant bit, c = a
+                                        2.  b= a to the power of the least significant bit, c = a         //b starts as a or 1
                                         3.  for (i=1;i>=s;i++)
                                         4.  { c=c*c (mod n);
                                                 if (binary of the current bit == 1)
