@@ -50,7 +50,13 @@ Pseudo-Random Generator: function Gen = {0,1}^s --maps_to--> {0,1}^n // s-length
    random. Technically known as a pseudo-random sequence. 
      Encryption:  E(K,M) = M XOR Gen(K)
      Decryption:  D(K,C) = C XOR Gen(K)
-    
+  However, PRG is only secure if a combination of efficient algorithm and a known prefix of the output cannot predict the
+    key in a non-negligible way. If there is no efficient algorthim no matter what the size of prefix, PRG is unpredictable
+ Weak PRGs (Do Not Use):
+                           Linear Congruential Generator: relies on linear transformation of seed data to output a few bits
+                                                          of output, then iterates again and again. Easy to predict given
+                                                          a few output sequences.
+                           glibc random(): common library that uses a PRG but is too predictable/broken
 
     
 
