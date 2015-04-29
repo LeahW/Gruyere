@@ -191,13 +191,17 @@ Hardware Efficiency for Exponents: More power is used up by each multiplication 
   Square and Multiply is vulnerable to side-channel attacks; possible to observe when if statements are ran based on
     increase in current, power or time delay, and thereby determine if a 1 or 0 is being processed.
     
-  Montgomery Reduction: 
+  Montgomery Reduction: a method to optimize modular exponentiation
                              m = T(-N^-1)(mod R)
                              t = (T + mN)/R
                                 if (N<=t)
                                   t=t-N
                                   
                             TR^-1 = (T + T(-N^-1) (mod R)N)/R (mod N)
+                            
+        Only conditions on R: R>N and R and N relatively prime. Efficiency gains can be made if you choose an R that is 
+           R=2K or a power of two, because multiplication of R is a trivial shift to the left of K bits. Similarly, a division
+           or modular R operation will be a shift to the right by k bits
                                             
                                        
                                        
