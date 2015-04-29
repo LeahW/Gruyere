@@ -45,7 +45,11 @@ One-time Pad: Uses a key space made up of random bit string of the same size as 
     All possible messages are equally likely to produce any given Cipher Text. No info about key text can be discerned.
     There is no possible cipher text-only attack, in other words, it has perfect secrecy (but other attacks are possible . . .)
     However, perfect secrecy requires key length >= message length
-
+Pseudo-Random Generator: function Gen = {0,1}^s --maps_to--> {0,1}^n // s-length seed space random bit maps to n output string
+   function Gen must be efficiently computable by a deterministic function. Only seed data is random, but output should look
+   random. Technically known as a pseudo-random sequence. 
+     Encryption:  E(K,M) = M XOR Gen(K)
+     Decryption:  D(K,C) = C XOR Gen(K)
     
 
     
