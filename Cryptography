@@ -67,7 +67,19 @@ Attacks on One Time Pad:
     Disk Encryption: Don't use a Stream Cipher. Edits to files using disk encryption create saved versions equiv to 2-time pad.
     Network traffic: Negotiate new key for every session (e.g. TLS)
   Malleable/No Integrity: Modifying specific text in CT will have a predictable impact on plain text.
-
+Deprecated Stream Ciphers:
+  RC4: Expands 128 bit seed to 2048 bit key. Generates loop with 1 byte output per cycle. Used in HTTPS and WEP.
+   Weaknesses: First 256 bytes biased; probability is 2/256 or twice probability of XOR with 0, i.e. not encrypted
+    More likely to get 2 bytes/16 bits of zeros in several gigabits of data. Related key attacks
+  CSS: Content Scrambling System for DVDs. Based on a hardware stream cipher implementation known as LFSR or Linear Feedback
+    Shift Register that shifts right and XOR one bit at a time while certain fixed value points are tapped. Examples: A5, EO
+    
+Modern Stream Ciphers:
+  eStream: Takes both a seed and a nonce as inputs. Nonce = value that will never repeat while key the same (can therefore 
+  re-use the key)
+  Salsa 20 is a stream cipher designed for software and hardware implementation. 128 or 256 bit keys act as keys and are used 
+   with nonce and a counter to create psuedo-random sequence for whatever length is needed. 643 MB/sec rate, supports video
+    
 
     
 
