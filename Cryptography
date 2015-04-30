@@ -60,8 +60,14 @@ Pseudo-Random Generator: function Gen = {0,1}^s --maps_to--> {0,1}^n // s-length
 Non-negligible: Occurence likely over 1 Gigabyte of data, expressed as probability 1/billionth or 1/2^30
 Negligible: Probability of 1/2^80 on the other hand, would not likely occur during the life of the key
 
-Attacks on One Time Pad: Reuse same pad again. Can XOR the two CT to obtain an XOR of both message texts. Enough redundancy
-  in English to tranlate XOR'ed text.
+Attacks on One Time Pad: 
+  Two Time Pad: Reuse same pad again. Can XOR the two CT to obtain an XOR of both M texts. Enough redundancy
+    in English and ASCII encoding to tranlate XOR'ed M text. This also means you need to have one key for client --> server
+    and another separate key for server --->client. Examples: Project Venona, MS-PPTP, 802.11b WEP, RC4
+    Disk Encryption: Don't use a Stream Cipher. Edits to files using disk encryption create saved versions equiv to 2-time pad.
+    Network traffic: Negotiate new key for every session (e.g. TLS)
+  Malleable/No Integrity: 
+
 
     
 
