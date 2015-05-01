@@ -79,6 +79,13 @@ Modern Stream Ciphers:
   re-use the key)
   Salsa 20 is a stream cipher designed for software and hardware implementation. 128 or 256 bit keys act as keys and are used 
    with nonce and a counter to create psuedo-random sequence for whatever length is needed. 643 MB/sec rate, supports video
+  Entropy as a source of Randomness: hardware RNG 9using physical processes), timing of hardware interrupts (key, mouse, etc.)
+  
+PRG Security Definitions:
+  Secure PRG: If there is no efficient algorithm that can distinguish between pseudo-random string and true random string
+      A secure PRG must be unpredictable. If next-bit predictor algorithms cannot predict PRG output better than output of
+      a truly random string, than the PRG is shown to be unpredictable and computationally indistinguishable from random string
+      
     
 
     
