@@ -86,6 +86,13 @@ PRG Security Definitions:
       A secure PRG must be unpredictable. If next-bit predictor algorithms cannot predict PRG output better than output of
       a truly random string, than the PRG is shown to be unpredictable and computationally indistinguishable from random string
       
+Semantic Security: If no information (LSB, GSB, XOR, etc.) can be learned about m from the CT, it is semantically secure
+  Advantage: Between 0 and 1. Close to 0, the attacker is not able to distinguish between messages. Close to 1, he can. 
+ One Time Pad is semantically secure because two messages encrypted using it would be indistinguishable to any attacker
+ 
+ 
+
+
     
 
     
