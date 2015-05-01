@@ -210,6 +210,8 @@ Side Channel Attacks: Target implementation of crypto algorithm, not perfectly s
   
 Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors), Leakage Current (even if system idle), 
   Short Circuits. 
+    Dynamic Leaks: The dynamic power consumption is based on switching activity (i.e. 0 to 1, 1 to 0) so if more power is 
+      used it may leak information that bits are changing rather than staying in the same state(i.e. 0 to 0, 1 to 1)
   
   
 Cache Memory:
