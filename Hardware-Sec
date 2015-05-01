@@ -203,6 +203,20 @@ Hardware Efficiency for Exponents: More power is used up by each multiplication 
            R=2K or a power of two, because multiplication of R is a trivial shift to the left of K bits. Similarly, a division
            or modular R operation will be a shift to the right by k bits
                                             
+Side Channel Attacks: Target implementation of crypto algorithm, not perfectly sound algorithm itself. It is also passive, 
+  non-invasive, and mostly untraceable. Monitoring phase: measure chip's physical characteristics (power consumption, current,
+  timing or delay, EM radiation or emission, acoustic information, optical information, output signals) during normal operation.
+  Data Analysis phase follows. Side Channel Attacks can be used to improve active attacks (input control, fault injection)
+  
+Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors), Leakage Current (even if system idle), 
+  Short Circuits. 
+  
+  
+Cache Memory:
+Power Analysis: SPA, DPA
+Timing Attacks:
+Scan Chain Attacks:
+
                                        
                                        
                                    
