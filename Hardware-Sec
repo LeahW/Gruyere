@@ -213,6 +213,18 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
     Dynamic Leaks: The dynamic power consumption is based on switching activity (i.e. 0 to 1, 1 to 0) so if more power is 
       used it may leak information that bits are changing rather than staying in the same state(i.e. 0 to 0, 1 to 1)
       Dynamic power is proportionate to the capacitance of switching activity.
+    Leakage Current: Proportionate to input, for example in 2 input nand gate, the leakage of 11 is 12 times higher than 00
+    Timing/Delay: Execution time of of actions for if statements, comparisons, etc. will vary based on which action was taken,
+      which operand was used, what the conditions were, etc. so analysis of delays can reveal this info. Sepecifically, 
+      control flow, data dependency, cache miss, and pipeline stall leaks of memory content can occur.
+    EM: Electromagnetic emissions come from  acceleration of charges in the conductor or antennas. Within 2 wavelength of 
+      antenna is dominated by EM waves, but this drops quickly as you get further away. These EM waves can modulate other 
+      on-chip signals through near field inductive and capacitative couplings. Em traces can in this way be used as side 
+      channel signals to discover other perations inside the chip.
+    Optical emissions: come from the movement of hot carriers like bose electrons and holes in FET channel. They can cause
+      visible or infrared light emission, which can be used for IC testing, debugging, and probably side channel attacks.
+      Optical analysis can gather data from microcontrollers, smartcards, FPGAs, ASICs.
+    Acoustic: When keys are entered or system components ran, specific sounds emitted. Microphones are needed
   
   
 Cache Memory:
