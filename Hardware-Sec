@@ -225,12 +225,7 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
       visible or infrared light emission, which can be used for IC testing, debugging, and probably side channel attacks.
       Optical analysis can gather data from microcontrollers, smartcards, FPGAs, ASICs.
     Acoustic: When keys are entered or system components ran, specific sounds emitted. Microphones are needed
-  
-  
-Cache Memory:
-Power Analysis: SPA, DPA
-Timing Attacks:
-Scan Chain Attacks:
+    Scan Chain Attacks: Certain inputs trigger testing-only scan mode. Random inputs may trigger these capabilities.
 
                                        
                                        
