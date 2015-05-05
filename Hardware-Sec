@@ -226,6 +226,12 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
       Optical analysis can gather data from microcontrollers, smartcards, FPGAs, ASICs.
     Acoustic: When keys are entered or system components ran, specific sounds emitted. Microphones are needed
     Scan Chain Attacks: Certain inputs trigger testing-only scan mode. Random inputs may trigger these capabilities.
+    Memory Load vulnerability: If secret memory is stored in the register, it will require measurable power to override 
+      whether there is a 'borrow' or not; how many instructions in true vs. false branches. 
+  Cache Attacks on Ciphers: When lookup tables are used in cipher or cache memory tables in the processor
+    These attacks can be trace-driven = monitor cache activity for each memory access, or time-driven = execution of each 
+    encryption. 
+    
 
                                        
                                        
