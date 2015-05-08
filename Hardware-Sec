@@ -232,6 +232,12 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
     These attacks can be trace-driven = monitor cache activity for each memory access, time-driven = execution of each 
     encryption, or access-driven = cache shared by other processes until it is evicted. 
     
+  Execution Flow: Main Memory --> Data Cache /or/ Information Cache --> Register File --> ALU,controller,function block, etc.
+    Vulnerabilities: If memory address is related to secret data, this can be leaked. Also, when the secret data value is 
+      overwritten, it requires certain power to override that can be measured and used to reveal information.
+      Memory store operations can also leak information of memory address and data stored. 
+      Arithmetic and Logic operations, particularly at bitlevel, can leak side-channel information
+    
 
                                        
                                        
