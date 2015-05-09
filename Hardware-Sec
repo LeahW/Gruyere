@@ -229,14 +229,23 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
     Memory Load vulnerability: If secret memory is stored in the register, it will require measurable power to override 
       whether there is a 'borrow' or not; how many instructions in true vs. false branches. 
   Cache Attacks on Ciphers: When lookup tables are used in cipher or cache memory tables in the processor
-    These attacks can be trace-driven = monitor cache activity for each memory access, time-driven = execution of each 
-    encryption, or access-driven = cache shared by other processes until it is evicted. 
+    These attacks can be:
+    Trace-driven: Monitor power of Electromagnetic Radiation traces to determine if cache miss or hit occurred. Smartcards or
+      other small embedded devices can be targeted.
+    Time-driven: Large amount of observation of execution time of each encryption to determine key. Has been used to target
+      small microcontrollers and large servers.
+    Access-driven = If cache memory shared by other processes until it is evicted, Attacker uses process on same host as the
+      encryption process to reveal the memory access pattern and steal data stored in the cache. 
+      
     
   Execution Flow: Main Memory --> Data Cache /or/ Information Cache --> Register File --> ALU,controller,function block, etc.
     Vulnerabilities: If memory address is related to secret data, this can be leaked. Also, when the secret data value is 
       overwritten, it requires certain power to override that can be measured and used to reveal information.
-      Memory store operations can also leak information of memory address and data stored. 
-      Arithmetic and Logic operations, particularly at bitlevel, can leak side-channel information
+      Memory Load operations may be leaked when generating/getting values, and when getting an address (MOV, LDR, ADR)
+      Memory store operations can also leak information of memory address and data stored. STR operations in Assembly
+      Arithmetic and Logic operations, particularly at bitlevel, can leak side-channel information SUB, in Assembly
+      
+  
     
 
                                        
