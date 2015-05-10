@@ -252,6 +252,12 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
       Memory store operations can also leak information of memory address and data stored. STR operations in Assembly
       Arithmetic and Logic operations, particularly at bitlevel, can leak side-channel information SUB, in Assembly
       
+  Simple power analysis: visual examination of graphs of the current used by a device over time to deduce information about
+    the data or operations. Different operations or same operation with different inputs may use different amounts of energy.
+    Power can be measured by Oscilloscopes and frequency filters/averaging functions to isolate only data-induced variations.
+    Example: Square vs. multiply operations can be detected as patterns on graph and the 0 or 1 input values deduced.
+    
+      
   
       
   
