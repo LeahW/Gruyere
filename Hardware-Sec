@@ -232,8 +232,15 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
     These attacks can be:
     Trace-driven: Monitor power of Electromagnetic Radiation traces to determine if cache miss or hit occurred. Smartcards or
       other small embedded devices can be targeted.
-    Time-driven: Large amount of observation of execution time of each encryption to determine key. Has been used to target
-      small microcontrollers and large servers.
+    Time-driven: Large number of observations of execution time of each encryption to determine key. Has been used to target
+      small microcontrollers and large servers. Requires measurable execution time variation based on key, start/completion 
+      synchronization signals, knowledge of the design of cryptographic system. Countermeasures: No look-up table in s-box,
+      small tables in a single memory block, cache-warming to avoid misses, data-oblivious memory access pattern (arbitrary order
+      of lookup when multiple memory access needed, request data from each memory block but only use the one needed), run-time
+      control: constant (cache-warming) or random delay. Hardware countermeasures: change memory pages to non-cachable memory,
+       to make all caches miss. Specialized cache design, specialized instructions to the Instruction Set Architecture. Data
+       pre-fetching: performance enhancing technique, fetchs needed data from main memory to cache before it is used. Also
+      increases cache hits and confuses attackers.
     Access-driven = If cache memory shared by other processes until it is evicted, Attacker uses process on same host as the
       encryption process to reveal the memory access pattern and steal data stored in the cache. 
       
@@ -244,6 +251,8 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
       Memory Load operations may be leaked when generating/getting values, and when getting an address (MOV, LDR, ADR)
       Memory store operations can also leak information of memory address and data stored. STR operations in Assembly
       Arithmetic and Logic operations, particularly at bitlevel, can leak side-channel information SUB, in Assembly
+      
+  
       
   
     
