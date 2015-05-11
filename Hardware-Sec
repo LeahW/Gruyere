@@ -275,7 +275,8 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
     
   Schindler's Observation: a large T used under Montgomery Reduction to simplify modular multiplication will require more
     substraction. Therefore when an attacker observes different cipher text value, if it takes very few substractions then 
-    value of c is equal to q or a multiple of q. Since n = pq, knowing q helps you break the key.
+    value of c is equal to q or a multiple of q. Since n = pq, knowing q helps you break the key. In determining whether next
+    bit is a 0 or 1, a great difference in power/timing indicates 1, while a small difference indicates 0
     
       
   
