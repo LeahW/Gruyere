@@ -255,7 +255,19 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
   Simple power analysis: visual examination of graphs of the current used by a device over time to deduce information about
     the data or operations. Different operations or same operation with different inputs may use different amounts of energy.
     Power can be measured by Oscilloscopes and frequency filters/averaging functions to isolate only data-induced variations.
+    Non-invasive, no evidence left of attack. Can also combine with other attacks, such as control of input signals to obtain
+    or verify information, or fault injection to create abnormal inputs and obtain particularly useful information.
+    Requires only a few observations, but high accuracy preferred. Also need to know the crypto system and implementation
     Example: Square vs. multiply operations can be detected as patterns on graph and the 0 or 1 input values deduced.
+    
+  Differential Power Analysis: Collect many power/current waveforms, build a model/hypothesis of secret key, apply hypothesis
+    test using advanced data analysis techniques. Works on any algorithms using s-box with XOR of segment key and known input
+    Requires knowledge of crypto system (which algorithm), many power traces (may require physical control), statistical
+    analysis tools. No need to know hardware/software implementation details, power waves data need not be detailed.
+    
+    Data Partition and DPA: If the algorithm is known, a test input can be encoded with all possible keys and attempted. The
+      average difference between the power wave of given bit-0 vs. given bit-1 will be negligible for all but the right key.
+      In this way, nearly any cipher can be brute-forced, but trying out all the keys takes a non-trivial amount of effort.
     
       
   
