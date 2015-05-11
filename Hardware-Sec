@@ -268,6 +268,14 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
     Data Partition and DPA: If the algorithm is known, a test input can be encoded with all possible keys and attempted. The
       average difference between the power wave of given bit-0 vs. given bit-1 will be negligible for all but the right key.
       In this way, nearly any cipher can be brute-forced, but trying out all the keys takes a non-trivial amount of effort.
+  
+  Kocher's Timing Attack on RSA: Guess some bits of exponent and predict how long decryption will take, the compare this with
+    actual runtime. Start by guessing the most significant top bits, look at correlations for each guess, pick most likely 
+    option and continue on
+    
+  Schindler's Observation: a large T used under Montgomery Reduction to simplify modular multiplication will require more
+    substraction. Therefore when an attacker observes different cipher text value, if it takes very few substractions then 
+    value of c is equal to q or a multiple of q. Since n = pq, knowing q helps you break the key.
     
       
   
