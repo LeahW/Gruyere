@@ -294,6 +294,10 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
       other applications. Can also build separation using 3D IC design and split fabrication design.
     Physical security: Denial of proximity, access, possession using acoustic shielding and secure zones (limit EM intercept)
     
+    Euler's Phi function: counts how many positive integers less than or equal to n that are relatively prime to n
+    Euler's Product function:
+    Euler's Theorem:
+    
     
       
   
