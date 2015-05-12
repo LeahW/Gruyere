@@ -287,7 +287,12 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
       balanced logic style to make power and/or delay independent of input and key. Using asynchronous logic (no clock or
       gloal synchronization) also makes it hard to determine start/completion time. Low power design makes signals weaker.
       Shielding, like upper level metal layer to prevent EM emission and sound dampening material can also be used.
-    Masking/blinding:
+    Masking/blinding: Remove correlation between input and side channel emissions, for example, through an XOR of output (gate
+      level) or randomization of input data (word level, requires changes to logic operations).
+    Design partitioning/seperation: red/black separation of plain text (red) and cipher text (black) in memory. Keep on-chip
+      infrastructure such as power supply reels, clock network, testing facilities separate from cryptographic operations and
+      other applications. Can also build separation using 3D IC design and split fabrication design.
+    Physical security: Denial of proximity, access, possession using acoustic shielding and secure zones (limit EM intercept)
     
     
       
