@@ -278,6 +278,18 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
     value of c is equal to q or a multiple of q. Since n = pq, knowing q helps you break the key. In determining whether next
     bit is a 0 or 1, a great difference in power/timing indicates 1, while a small difference indicates 0
     
+  Scan Chain Attacks: if a 0 or 1 starting input can determine whether system runs in normal or testing mode, this can be
+    used by attackers by observing scan out port and collecting info. Attacker can also take advantage of the controllability
+    of the scan in port by changing to test mode and inject desired state to flip-flops.
+    
+  SCA Countermeasures:
+    Hiding: Noise generator to add extra EM noise, random delay, or draw current randomly during execution. Also can use 
+      balanced logic style to make power and/or delay independent of input and key. Using asynchronous logic (no clock or
+      gloal synchronization) also makes it hard to determine start/completion time. Low power design makes signals weaker.
+      Shielding, like upper level metal layer to prevent EM emission and sound dampening material can also be used.
+    Masking/blinding:
+    
+    
       
   
       
