@@ -298,6 +298,11 @@ Power/Current Side Channel: Dynamic Power (used to charge/discharge capacitors),
     Euler's Product function:
     Euler's Theorem:
     
+Hardware Trojans: Any addition/modification to a circuit/system for malicious intentions. Most often, trying to control 
+  functionality, leak info, or reduce circuit reliability (sabotage). As opposed to non-malicious testing mode, don't-cares
+
+Trusted Integrated Circuits: Does what it is asked. No (malicious) more, no less.
+Untrusted: Fails required functionality tests or has hardware Trojans inside system.
     
       
   
