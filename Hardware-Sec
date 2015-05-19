@@ -303,6 +303,10 @@ Hardware Trojans: Any addition/modification to a circuit/system for malicious in
 
 Trusted Integrated Circuits: Does what it is asked. No (malicious) more, no less.
 Untrusted: Fails required functionality tests or has hardware Trojans inside system.
+
+Hardware Trojans can be inserted in either the IC Supply Chain phase or Design phase (abstraction level), can be placed in
+  processor chip, memory, or clock mechanism, functional or parametric (non-functional), big or small, tight or loose (spread
+  throughout system), and activated a number of ways for various results.
     
       
   
