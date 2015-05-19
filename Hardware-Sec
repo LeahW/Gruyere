@@ -306,7 +306,26 @@ Untrusted: Fails required functionality tests or has hardware Trojans inside sys
 
 Hardware Trojans can be inserted in either the IC Supply Chain phase or Design phase (abstraction level), can be placed in
   processor chip, memory, or clock mechanism, functional or parametric (non-functional), big or small, tight or loose (spread
-  throughout system), and activated a number of ways for various results.
+  throughout system), change or not change the layout, and can be activated a number of ways for various results.
+Supply Chain vulnerabilities:
+  Design phase; is most vulnerable to hardware trojans because it brings together many third-party IPs, design tools, and
+  design libraries.
+  Fabrication phase: can embed trojens in  mask (used to mold wafers) or change chemical composition to age faster, etc.
+  Assembly phase: extra connections or unshielded wires can be used to leak info
+  Testing phase: Need to test both functionality and trustworthiness, if hardware trojan is introduced here, it could make
+    earlier-inserted trojans unable to detect.
+Abstraction vulnerabilities:
+  Architectural level: what more does it do that it wasn't designed for? Example, other inputs considered valid by system
+  Functional level: Replace 1 of 2 input signals through an AND gate with a hardcoded signal that doesn't change unless
+    attacker disables it. When they do, that entire functional block is disabled. This is known as a Kill Switch, and also
+    works on OR gates
+  Circuit or Transistor level: Threshold voltage and transistor size can be changed to impact delay of logical gates, the
+    power consumption of logical units, or aging processs of the transistors. Can help later side channel attacks, leak info
+  Physical Design or Layout level: parametric trojans.
+  Design Environment: CAD tools used in design phases cannot be trusted, they can also insert hardware trojans.
+  
+  
+    
     
       
   
