@@ -333,7 +333,7 @@ TPM main functions are cryptographic key generation, protection of cryptographic
   generation, hardware authentication, remote attestation (changes to user's computer can be detected by authorized parties)
   and sealed storage of password, encryption keys, digital certificates.
   
-TPM keys:
+TPM key types:
   Endorsement Key (EK): An RSA public/private key pair that is created only once during TPM lifetime; private key is stored
     in TPM and used internally for decryption. Never revealed outside the TPM.
   Storage Root Key (SRK): Created when system's ownership is created and based on EK and user password. It is a master
@@ -341,7 +341,26 @@ TPM keys:
   Attestation Identity Key (AIK): Another pair of RSA keys, used for attestation. Public key will be signed by an EK and then
     sent to a trusted Certificate Authority (CA). CA validates the EK and issues a certificate for the AIK. TPM authenticates
     itself using this certificate. This is the first tep towards direct anonymous attestation.
-  Storage Key
+  Storage Key: An assymetric key used to encrypt data or other keys (as in wrapping)
+  Signing Key: A general purpose assymetric key used to sign application data and messages.
+  Bind Key: Encrypt small amount of data or key on one platform and decrypt it on another.
+  Authentication Key: Symmetric key to protect transport sessions.
+  Legacy Key: Can be exported to another TPM for signing and encryption.
+  
+TPM key attributes:
+  Non-migratable keys (NMK): bound to a single TPM, unique, stored inside the TPM and can't be migrated or exported.
+    Stored in TPM shielded locations and can create certificates for non-migratable keys.
+  Migratable keys (MK): Keys that are not generated for a specific TPM, can be created inside or outside TPM, and moved from
+    one TPM to another. Only trusted by the party that generated them.
+  Certified Migratable Keys (CMK): Generated inside a TPM, can move to another TPM, but must be coordinated by a migration
+    authority or migration selection authority that the creator chooses when CMK is created. Secure if authority trusted.
+    
+TPM Pros: Adds security against physical theft and attacks. Single sign on convenience. 
+TPM Cons: Holds data that could endanger user privacy if breached. Many different hardware and vendors that you must trust.
+
+Links: www.trustedcomputinggroup.org , use TPM with Linux, TPM and BitLocker in Win 8
+  
+  
   
   
   
