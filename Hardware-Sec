@@ -328,6 +328,11 @@ Field Programmable Gate Array (FPGA): A structure composed of programmable logic
   I/O buffers. Most FPGAs also includehard-wired functional units (embedded processors, DSP cores), memory blocks, high-speed
   input/output and other IPs, 
   
+Vulnerabilities in FPGA: Side-channel, fault injection, physical attack, trojan inserted in design or synthesis, IP misuse,
+  overbuilding by the foundry, cloning attack, FPGA replay attack (use a known vulnerability against newest models)
+Countermeasures: hardware metering, remote activation, trojan detection and prevention, testing, encryption, obfuscation, 
+  bind with encryption and PUF
+  
 Trust Platform Module: the set of specifications for a secure crypto-processor, and implementation of these specs to chip
 Trust Platform Chips: can be installed on motherboard and is used in most laptops, PCs, tablets, smart phones. They are used
   along with firewall, antivirus software, smart card, biometric verification. 
