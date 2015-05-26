@@ -324,6 +324,9 @@ Abstraction vulnerabilities:
   Physical Design or Layout level: parametric trojans.
   Design Environment: CAD tools used in design phases cannot be trusted, they can also insert hardware trojans.
   
+Field Programmable Gate Array (FPGA): A structure composed of programmable logic, connection, and switch blocks, along with 
+  I/O buffers. Most FPGAs also includehard-wired functional units (embedded processors, DSP cores), memory blocks, high-speed
+  input/output and other IPs, 
   
 Trust Platform Module: the set of specifications for a secure crypto-processor, and implementation of these specs to chip
 Trust Platform Chips: can be installed on motherboard and is used in most laptops, PCs, tablets, smart phones. They are used
