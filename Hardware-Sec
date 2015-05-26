@@ -362,6 +362,14 @@ TPM Pros: Adds security against physical theft and attacks. Single sign on conve
 TPM Cons: Holds data that could endanger user privacy if breached. Many different hardware and vendors that you must trust.
 
 Links: www.trustedcomputinggroup.org , use TPM with Linux, TPM and BitLocker in Win 8
+
+System specs --> FPGA device, HDL design, design constraint --> Configuration bitstream file (specific to chosen FPGA device)
+Advantages FPGA vs. Application-specific integrated circuit (ASIC): much shorter time to market, low-cost (no involvement by 
+  silicon foundries), reconfigurable.
+Advantages FPGA vs. Software Implementation: faster, more energy-efficient (no support needed from general purpose computer)
+Advantages Software Crypto Implementation: short turnaround, easy to debug/update, low cost
+Advantages Hardware Crypto Implementation: low power consumption, hight thoroughput, fast speed.
+
   
   
   
