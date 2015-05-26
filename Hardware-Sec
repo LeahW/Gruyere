@@ -324,6 +324,11 @@ Abstraction vulnerabilities:
   Physical Design or Layout level: parametric trojans.
   Design Environment: CAD tools used in design phases cannot be trusted, they can also insert hardware trojans.
   
+Hardware Trojan detection methods:
+  Logic-based test: run different test vectors (TV) and monitor response. Must target rare TV likely to trigger Trojan; 
+    impractical to test all possible combinations of input.
+  SCA-based: run side channel analysis and look for variations. May catch non-functional Trojans and false Positives
+  
 Field Programmable Gate Array (FPGA): A structure composed of programmable logic, connection, and switch blocks, along with 
   I/O buffers. Most FPGAs also includehard-wired functional units (embedded processors, DSP cores), memory blocks, high-speed
   input/output and other IPs, 
@@ -332,6 +337,11 @@ Vulnerabilities in FPGA: Side-channel, fault injection, physical attack, trojan 
   overbuilding by the foundry, cloning attack, FPGA replay attack (use a known vulnerability against newest models)
 Countermeasures: hardware metering, remote activation, trojan detection and prevention, testing, encryption, obfuscation, 
   bind with encryption and PUF
+  
+Physical Unclonable Function (PUF): physical entity that is embodied in a physical structure and is easy to evaluate and make
+  but hard to predict or duplicate. Uses challenge-response, not crypto, with a repeatable, but not analyzable, response given
+  Hard to spoof, but reliability may suffer due to physical conditions (humidity, temp), aging, and measurement error. Also
+  may be vulnerable to side-channel attacks and introduce new backdoors to system.
   
 Trust Platform Module: the set of specifications for a secure crypto-processor, and implementation of these specs to chip
 Trust Platform Chips: can be installed on motherboard and is used in most laptops, PCs, tablets, smart phones. They are used
