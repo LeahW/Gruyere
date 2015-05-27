@@ -328,6 +328,10 @@ Hardware Trojan detection methods:
   Logic-based test: run different test vectors (TV) and monitor response. Must target rare TV likely to trigger Trojan; 
     impractical to test all possible combinations of input.
   SCA-based: run side channel analysis and look for variations. May catch non-functional Trojans and false Positives
+  Power SCA: test power consumption in normal use and also rare use cases when you believe HT is triggered. Susceptible to
+    false positives, and may require triggering HT to detect. Ineffective for small HT or always-on HT
+  Delay: measure time taken to process inputs, delay may reveal a kill-switch or extra wire.
+  EM emission: switching on a HT results in measurable electromagnetic emissions
   
 Field Programmable Gate Array (FPGA): A structure composed of programmable logic, connection, and switch blocks, along with 
   I/O buffers. Most FPGAs also includehard-wired functional units (embedded processors, DSP cores), memory blocks, high-speed
